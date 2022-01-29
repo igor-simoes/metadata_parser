@@ -1772,7 +1772,7 @@ class MetadataParser(object):
                 #     resp.status_code,
                 # )
                 # log the history if it's there
-                response_history.log(prefix="NotParsableFetchError History")
+                # response_history.log(prefix="NotParsableFetchError History")
 
                 raise NotParsableFetchError(
                     message="Status Code is not 200",
