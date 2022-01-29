@@ -1598,8 +1598,8 @@ class MetadataParser(object):
             retry_dropped_without_headers=None
                 if true, will retry_dropped_without_headers
         """
-        if __debug__:
-            log.error("MetadataParser.fetch_url(%s)", self.url)
+        # if __debug__:
+        #     log.error("MetadataParser.fetch_url(%s)", self.url)
         # should we even download/parse this?
         force_parse = force_parse if force_parse is not None else self.force_parse
         force_parse_invalid_content_type = (
