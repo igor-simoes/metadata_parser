@@ -1766,11 +1766,11 @@ class MetadataParser(object):
                     )
 
             if only_parse_http_ok and resp.status_code != 200:
-                log.error(
-                    "NotParsableFetchError | %s | status_code: %s",
-                    self.url,
-                    resp.status_code,
-                )
+                # log.error(
+                #     "NotParsableFetchError | %s | status_code: %s",
+                #     self.url,
+                #     resp.status_code,
+                # )
                 # log the history if it's there
                 response_history.log(prefix="NotParsableFetchError History")
 
@@ -1832,11 +1832,11 @@ class MetadataParser(object):
                         self.is_redirect = True
                 except Exception:
                     pass
-            log.error(
-                "NotParsableFetchError | %s | `requests`: %s",
-                self.url,
-                error,
-            )
+            # log.error(
+            #     "NotParsableFetchError | %s | `requests`: %s",
+            #     self.url,
+            #     error,
+            # )
             raise NotParsableFetchError(
                 message="Error with `requests` library.  Inspect the `raised`"
                 " attribute of this error.",
